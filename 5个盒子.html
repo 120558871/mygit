@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+        #a{
+        	height:200px;
+        	width:200px;
+        	background:red;
+        	margin-top: 10px;
+        } 
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var a=document.getElementById("a");
+			var inp=document.getElementsByTagName("input");
+			for(var i=0;i<inp.length;i++){
+				inp[i].onclick=function(){
+					switch(this.value){
+						case"红色":a.style.background="red";break;
+						case"蓝色":a.style.background="blue";break;
+						case"粉色":a.style.background="pink";break;
+						case"绿色":a.style.background="green";break;
+						case"黄色":a.style.background="yellow";break;
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="红色">
+	<input type="button" value="蓝色">
+	<input type="button" value="粉色">
+	<input type="button" value="绿色">
+	<input type="button" value="黄色">
+	<div id="a"></div>
+</body>
+</html>
