@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.bigbox{
+			height:300px;
+			width:304px;
+			border:1px solid red;
+		}
+		.left{
+			height:300px;
+			width:100px;
+			border:1px  ;
+			float:left;
+		}
+		ul{
+			margin:0;
+			padding:0;
+		}
+		ul li{
+			height:48px;
+			width:98px;
+			border:1px solid blue;
+			list-style: none;
+			
+			text-align: center;
+			line-height: 48px;
+		}
+		.show{
+			border:none;
+		}
+		.right{
+			height:300px;
+			width:200px;
+			border:1px   ;
+			float:left;	
+			text-align: center;
+			line-height: 300px;		
+		}
+	</style>
+</head>
+<body>
+	<div class="bigbox">
+		<div class="left">
+			<ul>
+				<li val>手机</li>
+				<li>首饰</li>
+				<li>手表</li>
+				<li>衣服</li>
+				<li>电脑</li>
+				<li>平板</li>
+			</ul>
+		</div>
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+		<div class="right" id="sj">手机</div>
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var arr=document.getElementsByTagName("li");
+		var a=document.getElementById("h2");
+		for(var i=0;i<arr.length;i++){
+			arr[i].onclick=function(){
+				for(var n=0;n<arr.length;n++){
+					arr[n].className="";
+				}
+				this.className="show";
+				
+			}
+		}
+	}
+</script>
+</html>
